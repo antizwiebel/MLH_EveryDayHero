@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+
+    <!--
+    <View
+        android:id="@+id/particle_view_left"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="100dp"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        />
+
+    <View
+        android:id="@+id/particle_view_right"
+        android:layout_gravity="top|right"
+        android:layout_marginTop="100dp"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        />
+    -->
+
+    <peneder.mlh.gjovik.ntnu.no.everydayhero.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <peneder.mlh.gjovik.ntnu.no.everydayhero.camera.GraphicOverlay
+            android:id="@+id/faceOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </peneder.mlh.gjovik.ntnu.no.everydayhero.camera.CameraSourcePreview>
+
+    <View android:id="@+id/emiter_bottom"
+          android:layout_gravity="bottom|center"
+          android:layout_marginBottom="10dp"
+          android:layout_width="1dp"
+          android:layout_height="1dp" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/horizontalScrollView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/captain_america_image_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:onClick="toggleCaptainAmerica"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/captain_america_symbol"/>
+
+            <ImageButton
+                android:id="@+id/batman_image_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@null"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="8dp"
+                android:onClick="toggleBatman"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/batman_symbol"/>
+
+            <ImageButton
+                android:id="@+id/iron_man_image_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@null"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="8dp"
+                android:onClick="toggleIronMan"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/iron_man_symbol"/>
+
+            <ImageButton
+                android:id="@+id/black_widow_image_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@null"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="8dp"
+                android:onClick="toggleBlackWidow"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/black_widow_symbol"/>
+
+            <ImageButton
+                android:id="@+id/hulk_image_button"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:background="@null"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="8dp"
+                android:onClick="toggleHulk"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/hulk_symbol"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:gravity="bottom|center"
+        android:text=""
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textSize="14pt"/>
+
+    <Button
+        android:id="@+id/particle_view"
+        android:layout_gravity="center"
+        android:layout_marginTop="-20dp"
+        android:layout_width="1dp"
+        android:background="@null"
+        android:layout_height="1dp"
+        android:onClick="shootParticlesOnClick"
+        />
+
+    <TextView
+        android:id="@+id/particle_view_left"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="10dp"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text="Test"
+        />
+</RelativeLayout>
